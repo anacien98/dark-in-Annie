@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Questrial&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Annie's Birthday</title>
+</head>
+<body>
+
+<!--INTRODUCCION-->  
+<div class="intro scroll-fade">
+    <img id="img1" src="img/principal.png">
+    <p class="introtxt">“Nel buio, i cuori più puri imparano ad ardere.”</p>
+    <br><br><br>
+    <a href="#bienvenida" class="btngeneral">Adelante</a>
+</div>
+
+<hr>
+
+<!--BIENVENIDA-->  
+<div id="bienvenida" class="scroll-fade">
+    <img id="img2" src="img/touch.png">
+    <img id="img3" src="img/logo-2.png">
+    <p class="bndtxt">Una noche donde el deseo se viste de negro, las miradas susurran secretos y el vino guarda promesas que nadie debe romper.</p>
+    <hr>
+    <p class="bndtxt">Te invito a celebrar mi cumpleaños en una velada que no promete inocencia, sino placer, belleza y misterio.</p>
+</div>
+
+<!--INFORMACION-->  
+<div id="informacion" class="scroll-fade">
+    <img id="img4" src="img/chess.png">
+    <ul id="listinfo">
+        <li><img src="img/ubicacion.png"> Restaurante TOTORU</li> 
+        <li><img src="img/fecha.png"> 3 De Diciembre</li> 
+        <li><img src="img/horario.png"> 20:00 hrs</li> 
+    </ul>
+    <a href="https://maps.app.goo.gl/CUyH3kTrBNgkZcCT7" class="btngeneral">Ubicación en Maps</a>
+</div>
+
+<hr>
+
+<!--DRESSCODE-->  
+<div id="dresscode" class="scroll-fade">
+    <p class="titledc">DRESSCODE</p>
+    <div class="dress-layout">
+        <img src="img/dress.png" id="img9">
+    </div>
+    <p class="alltxt">ALL BLACK</p>
+    <p class="alltxt">Accesorios en tonos plata, dorado o rojo.</p>
+    <div class="dc-op">
+        <img id="img5" src="img/of2.png">
+        <img id="img6" src="img/of1.png">
+    </div>
+</div>
+
+<hr>
+
+<!--CONFIRMACION-->  
+<div class="confirmacion scroll-fade">
+    <img id="img7" src="img/last.png">
+    <p class="alltxt">Sería todo un honor que me puedas acompañar.</p>
+    <p class="alltxt">Por favor hazmelo saber dando click al botón de confirmación.</p>
+    <a href="https://wa.me/526462083937?text=Hola%20confirmo%20mi%20asistencia" class="btngeneral">Confirmación</a>
+    <p class="txtfinal">"La oscuridad se vuelve arte… y el deseo, celebración."</p>
+    <img id="img8" src="img/logo-3.png">
+</div>
+
+    <script>
+  // Detecta los elementos con clase .scroll-fade al hacer scroll
+    document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".scroll-fade");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<audio id="bg-music" autoplay loop muted>
+    <source src="song.MP3" type="audio/mpeg">
+Tu navegador no soporta audio HTML5.
+</audio>
+
+<script>
+  // Al primer clic, activa el sonido
+document.addEventListener("click", () => {
+    const music = document.getElementById("bg-music");
+    if (music.muted) {
+        music.muted = false;
+        music.play();
+    }
+}, { once: true });
+</script>
+
+
+</body>
+</html>
