@@ -29,8 +29,12 @@ div {
 #img1 {
     width: 100%;
     height: auto;
-    margin-top: 40%;
+    margin-top: 20%;
     padding: 20px;
+}
+
+#img2{
+    margin-top: 20%;
 }
 
 #img3 {
@@ -41,10 +45,8 @@ div {
 
 #img7 {
     display: block;
-    margin-left: auto; /* empuja la imagen hacia la derecha */
-    margin-right: 0;
-    width: 80%;        /* ajusta el tamaño según necesites */
-    height: auto;
+    width: 30vh;
+    margin: 0 auto; 
 }
 
 #img8 {
@@ -83,7 +85,7 @@ div {
     text-align: center;
     margin: 20px auto;
     line-height: 1.5;
-    font-size: 25px;
+    font-size: 15px;
     padding: 10px;
 }
 
@@ -96,6 +98,7 @@ div {
     text-align: center;
     margin-top: 80px;
     font-size: 40px;
+    padding: 20PX;
 }
 
 /* ----- LISTA ----- */
@@ -122,6 +125,7 @@ div {
     margin-right: 10px;
 }
 
+
 /* ----- DRESSCODE OPCIONES ----- */
 .dc-op {
     display: flex;
@@ -145,7 +149,7 @@ hr {
     justify-content: flex-start; /* imagen a la izquierda */
     align-items: center;
     width: 100%;
-    margin-top: 40px;
+    
 }
 
 #img9 {
